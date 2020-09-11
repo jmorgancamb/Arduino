@@ -16,14 +16,14 @@ void setup()
     // Now set up two tasks to run independently.
     xTaskCreate(StatusLEDTask,  
                 "Blink",
-                128,    // Stack size
+                64,     // Stack size
                 NULL,
                 2,      // priority
                 NULL);
 
     xTaskCreate(LCDTask,
                 "LCD",
-                128,    // Stack size
+                256,    // Stack size
                 NULL,
                 1,      // priority
                 NULL);
